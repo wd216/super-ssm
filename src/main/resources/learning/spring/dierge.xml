@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="donkey" class="learning.components.Donkey" c:_0="得水">
+        <!--<constructor-arg index="0" value="得水"/> 效果跟上面 c:-0="得水"是一样的 -->
+        <constructor-arg index="1" value="333"/>
+        <constructor-arg index="2">
+            <bean class="learning.components.DonkeyWife"/>
+        </constructor-arg>
+    </bean>
+
+</beans>
